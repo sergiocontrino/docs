@@ -1,0 +1,59 @@
+download and install (correct version for you os) of postgres
+
+see https://postgresapp.com/
+and 
+http://postgresguide.com/
+
+echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp
+
+psql
+
+sergio=# create user modmine with password 'modmine';
+
+sergio=# create database biotestmine;
+
+sergio=# grant all privileges on database biotestmine to modmine;
+
+sergio=# create database "items-biotestmine";
+CREATE DATABASE
+sergio=# grant all privileges on database "items-biotestmine" to modmine;
+GRANT
+
+sergio=# alter user modmine with createdb;
+ALTER ROLE
+
+now you can
+sergio$ psql -U modmine -d biotestmine
+
+
+git clone https://github.com/intermine/biotestmine
+export GRADLE_OPTS="-Dorg.gradle.daemon=false"
+
+
+on mac:
+sed -i '' 's/DATA\_DIR/\/Users\/sergio\/data/g' project.xml
+
+rather than
+sed -i  's/DATA\_DIR/\/Users\/sergio\/data/g' project.xml
+
+TODO: correct doc
+https://intermine.readthedocs.io/en/latest/get-started/tutorial/
+
+SOLR
+curl -O http://archive.apache.org/dist/lucene/solr/7.2.1/solr-7.2.1.zip
+
+follow
+https://github.com/intermine/biotestmine/wiki
+
+if no PERL:
+
+sudo perl -e shell -MCPAN
+
+then
+install XML::Parser
+install XML::Parser::PerlSAX
+
+exit
+
+
+
