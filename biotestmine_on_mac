@@ -56,4 +56,27 @@ install XML::Parser::PerlSAX
 exit
 
 
+curl -O  https://raw.githubusercontent.com/intermine/intermine-scripts/master/project_build
+chmod +x project_build
+./project_build -b -v localhost ~/biotestmine-dump
 
+in tomcat dir edit files as describe in docs
+
+nano conf/tomcat-users.xml
+nano conf/context.xml 
+nano conf/server.xml 
+nano bin/startup.sh
+
+then 
+./bin/startup.sh
+
+
+-- only once
+createdb -U modmine userprofile-biotestmine
+./gradlew buildUserDB
+
+-- first time
+./gradlew cargoDeployRemote
+
+-- after
+./gradlew cargoReDeployRemote
