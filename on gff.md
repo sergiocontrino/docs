@@ -30,7 +30,8 @@ add to your *project.xml* file something like (assuming human data -> taxid=9606
 </source>
 ```
 
-if you deal with human data, then you need to check also the setting in *bio/core/src/main/resources/gff_config.properties*
+if you deal with human data, then you need to check also the file
+*bio/core/src/main/resources/gff_config.properties*
 where there are some default settings.
 
 **important**: the third field must be a feature that is modelled in the mine. 
