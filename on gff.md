@@ -1,21 +1,22 @@
-the gff general parsing can be make working again (TODO: why was not enabled?)
+the gff general parsing can be make working again (**TODO**: why was not enabled?)
 
-in the intermine repo:
+in the **intermine** repo:
 
-file **bio/sources/settings.gradle**: you need to add the source bio-source-gff
-
+file *bio/sources/settings.gradle*: you need to add the source bio-source-gff
+```
 +':bio-source-gff',
  ':bio-source-go',
-
+```
 and 
-
+```
 +project(':bio-source-gff').projectDir = new File(settingsDir, './gff')
  project(':bio-source-go-annotation').projectDir = new File(settingsDir, './go-annotation')
-
+```
+then:
 
 `./gradlew bio-source-gff:install --stacktrace`
 
-then add to your project file something like (assuming human data -> taxid=9606): 
+add to your *project.xml* file something like (assuming human data -> taxid=9606): 
 
 ```xml
 <source name="exgff3" type="gff">
@@ -29,9 +30,11 @@ then add to your project file something like (assuming human data -> taxid=9606)
 </source>
 ```
 
-if you human, then you need to check also the setting in bio/core/src/main/resources/gff_config.properties
+if you deal with human data, then you need to check also the setting in *bio/core/src/main/resources/gff_config.properties*
 where there are some default settings.
 
-important: the third field must be a feature that is modelled in the mine. 
+**important**: the third field must be a feature that is modelled in the mine. 
 so if one of the core ones (gene, protein, etc) there is nothing to do, otherwise you need to add to the mine model your new entities.
+
+
 
