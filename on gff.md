@@ -1,7 +1,7 @@
 the gff general parsing can be make working again (TODO: why was not enabled?)
 
 in the intermine repo:
-```
+
 file **bio/sources/settings.gradle**: you need to add the source bio-source-gff
 
 +':bio-source-gff',
@@ -16,7 +16,7 @@ and
 `./gradlew bio-source-gff:install --stacktrace`
 
 then add to your project file something like (assuming human data -> taxid=9606): 
-```
+
 ```xml
 <source name="exgff3" type="gff">
   <property name="gff3.taxonId" value="9606"/>
