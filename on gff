@@ -2,7 +2,7 @@ the gff general parsing can be make working again (TODO: why was not enabled?)
 
 in the intermine repo:
 
-file bio/sources/settings.gradle
+file **bio/sources/settings.gradle**: you need to add the source bio-source-gff
 
 +':bio-source-gff',
  ':bio-source-go',
@@ -13,10 +13,11 @@ and
  project(':bio-source-go-annotation').projectDir = new File(settingsDir, './go-annotation')
 
 
-./gradlew bio-source-gff:install --stacktrace
+`./gradlew bio-source-gff:install --stacktrace`
 
 then add to your project file something like (assuming human data -> taxid=9606): 
 
+```xml
 <source name="exgff3" type="gff">
   <property name="gff3.taxonId" value="9606"/>
   <property name="gff3.seqClsName" value="Chromosome"/>
@@ -26,6 +27,7 @@ then add to your project file something like (assuming human data -> taxid=9606)
   <!-- add licence here -->
   <property name="gff3.licence" value="https://creativecommons.org/licenses/by-sa/3.0/" />
 </source>
+```
 
 if you human, then you need to check also the setting in bio/core/src/main/resources/gff_config.properties
 where there are some default settings.
