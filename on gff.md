@@ -21,8 +21,8 @@ and
 ```
 then:
 
-cd bio
-`./gradlew bio-source-gff:install --stacktrace`
+`cd bio
+./gradlew bio-source-gff:install --stacktrace`
 
 <h2> in your mine add your gff source </h2>
 
@@ -39,7 +39,7 @@ add to your *project.xml* file something like (assuming human data -> taxid=9606
   <property name="gff3.licence" value="https://creativecommons.org/licenses/by-sa/3.0/" />
 </source>
 ```
-<h2> troubleshooting
+<h2> troubleshooting </h2>
 if you deal with human data, then you need to check also the file
 *bio/core/src/main/resources/gff_config.properties*
 in your intermine directory
