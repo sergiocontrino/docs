@@ -22,7 +22,8 @@ and
 then:
 
 `cd bio
-./gradlew bio-source-gff:install --stacktrace`
+
+./gradlew bio-source-gff:install --stacktrace`https://github.com/intermine/intermine.git
 
 <h2> in your mine add your gff source </h2>
 
@@ -36,16 +37,18 @@ add to your *project.xml* file something like (assuming human data -> taxid=9606
   <property name="gff3.dataSourceName" value="yoursourcename"/>
   <property name="gff3.dataSetTitle" value="your dataset title"/>
   <!-- add licence here -->
-  <property name="gff3.licence" value="https://creativecommons.org/licenses/by-sa/3.0/" />
+  <property name="gff3.licence" value="https://chttps://github.com/intermine/intermine.gitreativecommons.org/licenses/by-sa/3.0/" />
 </source>
 ```
 <h2> troubleshooting </h2>
-if you deal with human data, then you need to check also the file
+
+* if you deal with human data, then you need to check also the file
 *bio/core/src/main/resources/gff_config.properties*
 in your intermine directory
 where there are some default settings.
 
-**important**: the third field in the gff file must be a feature that is modelled in the mine. 
+
+* **important**: the third field in the gff file must be a feature that is modelled in the mine. 
 so if one of the core ones (gene, protein, etc) there is nothing to do, otherwise you need to add to the mine model your new entities.
 
 
