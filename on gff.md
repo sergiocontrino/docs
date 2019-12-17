@@ -21,9 +21,10 @@ and
 ```
 then:
 
-`cd bio
-
-./gradlew bio-source-gff:install --stacktrace`
+```
+cd bio
+./gradlew bio-source-gff:install --stacktrace
+```
 
 <h2> in your mine add your gff source </h2>
 
