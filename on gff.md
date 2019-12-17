@@ -22,7 +22,7 @@ and
 then:
 
 ```
-cd bio
+cd bio/sources
 ./gradlew bio-source-gff:install --stacktrace
 ```
 
