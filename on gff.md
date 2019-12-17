@@ -1,8 +1,15 @@
 the gff general parsing can be make working again (**TODO**: why was not enabled?)
 
-in the **intermine** repo:
 
-file *bio/sources/settings.gradle*: you need to add the source bio-source-gff
+<h2> install locally intermine
+
+```
+git clone https://github.com/intermine/intermine.git 
+```
+cd intermine
+https://github.com/intermine/intermine.git
+edit the file *bio/sources/settings.gradle*: you need to add the source bio-source-gff (see + below)
+
 ```
 +':bio-source-gff',
  ':bio-source-go',
@@ -14,7 +21,10 @@ and
 ```
 then:
 
+cd bio
 `./gradlew bio-source-gff:install --stacktrace`
+
+<2> in your mine add your gff source
 
 add to your *project.xml* file something like (assuming human data -> taxid=9606): 
 
@@ -29,12 +39,13 @@ add to your *project.xml* file something like (assuming human data -> taxid=9606
   <property name="gff3.licence" value="https://creativecommons.org/licenses/by-sa/3.0/" />
 </source>
 ```
-
+<h2> troubleshooting
 if you deal with human data, then you need to check also the file
 *bio/core/src/main/resources/gff_config.properties*
+in your intermine directory
 where there are some default settings.
 
-**important**: the third field must be a feature that is modelled in the mine. 
+**important**: the third field in the gff file must be a feature that is modelled in the mine. 
 so if one of the core ones (gene, protein, etc) there is nothing to do, otherwise you need to add to the mine model your new entities.
 
 
