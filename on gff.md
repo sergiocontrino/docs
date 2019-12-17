@@ -1,7 +1,7 @@
 the gff general parsing can be make working again (**TODO**: why was not enabled?)
 
 
-<h2> install locally intermine
+<h2> install locally intermine </h2>
 
 ```
 git clone https://github.com/intermine/intermine.git 
@@ -24,7 +24,7 @@ then:
 cd bio
 `./gradlew bio-source-gff:install --stacktrace`
 
-<2> in your mine add your gff source
+<h2> in your mine add your gff source </h2>
 
 add to your *project.xml* file something like (assuming human data -> taxid=9606): 
 
