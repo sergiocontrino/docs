@@ -7,8 +7,8 @@ the gff general parsing can be make working again (**TODO**: why was not enabled
 git clone https://github.com/intermine/intermine.git 
 ```
 cd intermine
-https://github.com/intermine/intermine.git
-edit the file *bio/sources/settings.gradle*: you need to add the source bio-source-gff (see + below)
+
+edit the file *bio/sources/settings.gradle*: you need to add the source bio-source-gff (add the lines marked with **+** below)
 
 ```
 +':bio-source-gff',
@@ -23,7 +23,7 @@ then:
 
 `cd bio
 
-./gradlew bio-source-gff:install --stacktrace`https://github.com/intermine/intermine.git
+./gradlew bio-source-gff:install --stacktrace`
 
 <h2> in your mine add your gff source </h2>
 
