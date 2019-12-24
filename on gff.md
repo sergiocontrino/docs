@@ -81,11 +81,11 @@ to run a build, i had to change all the various 'association' fields (Exterior_A
 - some of the records are missing the locations, and the '.' to mark its absence.
 you need to have something like 
 
->'Gene . . . . .' 
+>Gene . . . . .
 
 rather than 
 
->'Gene   . . .'
+>Gene   . . .
 
 - in the attributes field (the last one) you must have name=value pairs. sometime this is not the case
 e.g. 
