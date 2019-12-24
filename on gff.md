@@ -7,7 +7,7 @@ mkdir git
 ```
 in your .intermine dir put your properties file mymine.properties
 
-in your git directory place your mine, follow instructions here https://intermine.readthedocs.io/en/latest/get-started/create-your-mine/ . 
+in your git directory place your mine, follow instructions [here](https://intermine.readthedocs.io/en/latest/get-started/create-your-mine/) . 
 
 Note: 
 ```
@@ -15,7 +15,7 @@ cd git
 git clone https://github.com/mygithub/mymine.git
 ```
 
-Alternatively, you could just use a checkout of biotestmine, see [here] (https://github.com/intermine/biotestmine/wiki)
+Alternatively, you could just use a checkout of biotestmine, see [here](https://github.com/intermine/biotestmine/wiki)
 
 Note:
 ```
