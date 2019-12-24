@@ -29,7 +29,7 @@ git clone https://github.com/intermine/biotestmine
 cd git
 git clone https://github.com/intermine/intermine.git 
 cd intermine
-git clone https://github.com/intermine/biotestmine```
+```
 
 edit the file *bio/sources/settings.gradle*: you need to add the source bio-source-gff (add the lines marked with **+** below)
 
