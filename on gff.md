@@ -1,12 +1,35 @@
 the gff general parsing can be make working again (**TODO**: why was not enabled?)
+<h2>step 0: prepare your intermine environment </h2>
+for example: in your home directory $HOME
+```
+mkdir .intermine
+mkdir git
+```
+in your .intermine dir put your properties file mymine.properties
 
+in your git directory place your mine, follow instructions here https://intermine.readthedocs.io/en/latest/get-started/create-your-mine/ . 
+
+Note: 
+```
+cd git
+git clone https://github.com/mygithub/mymine.git
+```
+
+Alternatively, you could just use a checkout of biotestmine, see [here] (https://github.com/intermine/biotestmine/wiki)
+
+Note:
+```
+cd git
+git clone https://github.com/intermine/biotestmine
+```
 
 <h2> install locally intermine </h2>
 
 ```
+cd git
 git clone https://github.com/intermine/intermine.git 
-```
 cd intermine
+git clone https://github.com/intermine/biotestmine```
 
 edit the file *bio/sources/settings.gradle*: you need to add the source bio-source-gff (add the lines marked with **+** below)
 
@@ -29,7 +52,7 @@ cd bio/sources
 <h2> in your mine add your gff source </h2>
 
 add to your *project.xml* file something like (assuming human data -> taxid=9606): 
-
+git clone https://github.com/intermine/biotestmine
 ```xml
 <source name="exgff3" type="gff">
   <property name="gff3.taxonId" value="9606"/>
