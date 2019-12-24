@@ -89,9 +89,11 @@ rather than
 
 - in the attributes field (the last one) you must have name=value pairs. sometime this is not the case
 e.g. 
-> FlankMarkers;
+>FlankMarkers;
+
 in 
-Chr.16	Animal QTLdb	Exterior_Association	62860102	62943884	.	.	.	QTL_ID=17668;Name="Maternal infanticide";Abbrev=MATINF;PUBMED_ID=21303561;trait_ID=538;trait=Maternal infanticide;FlankMarkers;VTO_name="parental behavior trait";Map_Type=Linkage;Model=Mendelian;peak_cM=57.2;Significance=Significant;P-value=0.009;Likelihood_Ratio=9.485;gene_ID=100144487;gene_IDsrc=NCBIgene
+
+>Chr.16	Animal QTLdb	Exterior_Association	62860102	62943884	.	.	.	QTL_ID=17668;Name="Maternal infanticide";Abbrev=MATINF;PUBMED_ID=21303561;trait_ID=538;trait=Maternal infanticide;FlankMarkers;VTO_name="parental behavior trait";Map_Type=Linkage;Model=Mendelian;peak_cM=57.2;Significance=Significant;P-value=0.009;Likelihood_Ratio=9.485;gene_ID=100144487;gene_IDsrc=NCBIgene
 
 and that breaks the parsing.
 
