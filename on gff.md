@@ -79,7 +79,13 @@ so if one of the core ones (gene, protein, etc) there is nothing to do, otherwis
 to run a build, i had to change all the various 'association' fields (Exterior_Association, Health_Association, Reproduction_Association, etc) to something in the model. I used 'gene'
 
 - some of the records are missing the locations, and the '.' to mark its absence.
-you need to have something like 'Gene . . . . .' rather than 'Gene   . . .'
+you need to have something like 
+
+>'Gene . . . . .' 
+
+rather than 
+
+>'Gene   . . .'
 
 - in the attributes field (the last one) you must have name=value pairs. sometime this is not the case
 e.g. 
