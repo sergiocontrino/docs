@@ -71,9 +71,22 @@ git clone https://github.com/intermine/biotestmine
 in your intermine directory
 where there are some default settings.
 
+<h2>Issues with your gff files</h2>
 
 * **important**: the third field in the gff file must be a feature that is modelled in the mine. 
 so if one of the core ones (gene, protein, etc) there is nothing to do, otherwise you need to add to the mine model your new entities.
 
+to run a build, i had to change all the various 'association' fields (Exterior_Association, Health_Association, Reproduction_Association, etc) to something in the model. I used 'gene'
+
+- some of the records are missing the locations, and the '.' to mark its absence.
+you need to have something like 'Gene . . . . .' rather than 'Gene   . . .'
+
+- in the attributes field (the last one) you must have name=value pairs. sometime this is not the case
+e.g. 
+> FlankMarkers;
+in 
+Chr.16	Animal QTLdb	Exterior_Association	62860102	62943884	.	.	.	QTL_ID=17668;Name="Maternal infanticide";Abbrev=MATINF;PUBMED_ID=21303561;trait_ID=538;trait=Maternal infanticide;FlankMarkers;VTO_name="parental behavior trait";Map_Type=Linkage;Model=Mendelian;peak_cM=57.2;Significance=Significant;P-value=0.009;Likelihood_Ratio=9.485;gene_ID=100144487;gene_IDsrc=NCBIgene
+
+and that breaks the parsing.
 
 
